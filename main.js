@@ -21,8 +21,6 @@ app.on('ready', () => {
     var mainWindow = new Window({
         file: home
     })
-    
-    console.log(app.getPath('userData'));
 
     ipcMain.on("decks", (event, message) => {
         event.reply("decks", stor.read().decks);
