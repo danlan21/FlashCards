@@ -1,0 +1,308 @@
+body {
+    font: caption;
+    margin: 0px;
+}
+
+/* Card View Style */
+
+div#questionTitleBanner {
+    text-align: center;
+    width: 100%;
+    margin: 4px;
+    min-height: 10%;
+    font-size: large;
+    text-decoration: underline;
+}
+
+div#questionTitleBanner p#nameText {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#container tr {
+    height: 20%;
+}
+
+#container {
+    width: 100%;
+    height: auto;
+}
+
+th.individualQuestion {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    width: 25%;
+    height: 200px;
+    margin: 2px;
+}
+
+div.answer {
+  height: 100%;
+  display: none;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+div.question {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/*********************************************/
+
+/* Main Deck View Style */
+
+div#decksEmptyBanner {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    background: red;
+    width: 100%;
+    min-height: 10%;
+    font-weight: bold;
+    margin: 4px;
+}
+
+th.singleDeck:hover {
+    border: 3px solid #3ed620;
+    color: #3ed620;
+    background: #fff;
+}
+
+th.singleDeck {
+    width: 33%;
+    height: 200px;
+    margin: 8px;
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+#listDecks tr {
+    height: 20%;
+}
+
+#listDecks {
+    width: 100%;
+    height: auto;
+}
+
+/***************************************/
+
+/* Add Button Style */
+
+.icon-btn {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #1dd11d;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.2s ease-in-out;
+}
+  .add-btn:hover {
+    width: 120px;
+}
+  .add-btn::before,
+  .add-btn::after {
+    transition: width 0.2s ease-in-out, border-radius 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 10px;
+    top: calc(50% - 2px);
+    background: rgb(0, 128, 0);
+}
+  .add-btn::after {
+    right: 14px;
+    overflow: hidden;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+  .add-btn::before {
+    left: 14px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+  .icon-btn:focus {
+    outline: none;
+}
+  .btn-txt {
+    color: green;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+  .add-btn:hover::before,
+  .add-btn:hover::after {
+    width: 4px;
+    border-radius: 2px;
+}
+  .add-btn:hover .btn-txt {
+    opacity: 1;
+}
+  .add-icon::after,
+  .add-icon::before {
+    transition: all 0.2s ease-in-out;
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 2px;
+    top: calc(50% - 10px);
+    background: green;
+    overflow: hidden;
+}
+  .add-icon::before {
+    left: 22px;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+  .add-icon::after {
+    right: 22px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+  .add-btn:hover .add-icon::before {
+    left: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+  .add-btn:hover .add-icon::after {
+    right: 15px;
+    height: 4px;
+    top: calc(50% - 2px);
+}
+/******************************************************/
+
+/* Flip Card Animation Style */
+
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 200px;
+    border: 1px solid #000000;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+/* .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+} */
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+  
+  /* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+  
+  /* Style the front side (fallback if image is missing) */
+.flip-card-front {
+    background-color: rgba(121, 218, 65, 0.397);
+    color: black;
+}
+  
+  /* Style the back side */
+.flip-card-back {
+    background-color: dodgerblue;
+    color: white;
+    transform: rotateY(180deg);
+    font-weight: bolder;
+}
+/********************************************************************/
+
+/* New Deck View Style */
+
+div#deckName {
+  margin: auto;
+  width: 50%;
+  padding: 6px;
+}
+
+div#newQuestion {
+  width: 50%;
+  background-color: #5f9ea0;
+  border: 4px solid #6bcbcf;
+  margin: auto;
+  padding: 6px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+input#inputQuestion {
+  margin-bottom: 8px;
+}
+
+label#inputQuestionLabel, label#inputAnswerLabel, label#deckNameLabel {
+  margin-bottom: 8px;
+  float: left;
+}
+
+.input {
+  padding:8px;
+  display:block;
+  border:none;
+  border-bottom:1px solid #000000;
+  width:100%;
+}
+
+/***********************/
+
+/* New Deck - Add Question Button */
+
+button#addQuestion {
+  margin: auto;
+  padding: 4px;
+  margin-top: 8px;
+}
+
+/**********************************/
+
+/* New Deck - Complete Deck Button */
+
+div.bottomButtonDiv {
+  margin-top: 16px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+/***********************************/
+
+/* New Deck - Card Display Style */
+
+div#cardDisplay {
+  width: 100%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 24px;
+}
+
+/***********************************/
